@@ -1,14 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ФРЕШОК</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
+
+  <header class="header">
+
+    <div class="header__top">
+      <div class="container">
+        <div class="header__wrapper header__wrapper--top">
+          <div class="header__links">
+            <a class="header__link header__link--address" href="#">
+              адрес и время доставки
+            </a>
+            <a class="header__link header__link--tel" href="#">
+              горячая линия 24/7
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">доставка</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">о нас</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">новости</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__wrapper header__wrapper--bottom">
+          <a class="header__logo" href="#">
+            <img class="logo" src="images/logo.svg" alt="Логотип">
+          </a>
+          <a class="header__catalog" href="#">
+            Каталог продуктов
+          </a>
+          <div class="header__search-box">
+            <form class="search">
+              <input class="search__input" type="text">
+              <button class="search__btn">поиск</button>
+            </form>
+          </div>
+
+          <div class="user">
+            <a href="#" class="user__link">
+              <img class="user__img" src="images/icon-user.svg" alt="">
+            </a>
+            <a href="#" class="user__link">
+              <span class="user__num">12</span>
+              <img class="user__img" src="images/icon-heart.svg" alt="">
+            </a>
+            <a href="#" class="user__link">
+              <span class="user__num">12</span>
+              <img class="user__img" src="images/icon-cart.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

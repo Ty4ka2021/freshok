@@ -1,0 +1,18 @@
+body {
+  font-size: 14px;
+  @extend %lato-700;
+  @extend %grey;
+}
+
+.title {
+  @extend %signika-600, %dark;
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 1310px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}

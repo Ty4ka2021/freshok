@@ -4,9 +4,158 @@
 @import "global";
 
 
+.header__top {
+  background-color: #31352B;
+}
 
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
 
+.header__wrapper--top {
+  padding: 17px 0;
+  color: #fff;
+  text-transform: uppercase;
+}
 
+.header__link {
+  position: relative;
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+}
+
+.header__link--address {
+  padding-left: 44px;
+}
+
+.header__link--address::after {
+  width: 32px;
+  height: 23px;
+  background-image: url(../images/address-icon.svg);
+}
+
+.header__link--tel {
+  margin-left: 48px;
+  padding-left: 34px;
+}
+
+.header__link--tel::after {
+  width: 22px;
+  height: 23px;
+  background-image: url(../images/tel-icon.svg);
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.header__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.header__bottom {
+  background-color: #63a60f;
+}
+
+.header__wrapper--bottom {
+  padding: 31px 0;
+}
+
+.header__catalog {
+  background-color: #fff;
+  @extend %green;
+  padding: 17px 40px 17px 61px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.header__catalog::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 17px;
+  background-image: url(../images/catalog-icon.svg);
+}
+
+.header__catalog::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 4px;
+  background-image: url(../images/catalog-arrow-icon.svg);
+}
+
+.header__search-box {
+  margin-right: 8px;
+}
+
+.search {
+  position: relative;
+}
+.search__input {
+  width: 576px;
+  height: 50px;
+  border-radius: 6px;
+  padding: 0  168px 0 10px;
+  
+}
+.search__btn {
+  color: #fff;
+  background-color: #31352B;
+  border-radius: 0 6px 6px 0;
+  height: 50px;
+  width: 158px;
+  @extend %lato-700;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.user {
+  display: flex;
+}
+
+.user__link {
+  position: relative;
+}
+
+.user__link:not(:last-child) {
+  margin-right: 24px;
+}
+
+.user__img {
+  display: block;
+  max-width: 100%;
+}
+
+.user__num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -5px;
+    left: -7px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+    color: #CF3E3B;
+}
 
 
 
