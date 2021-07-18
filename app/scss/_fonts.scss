@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Lato-Light' , sans-serif;
+  src: local('Lato-Light'),
+       url('../fonts/Lato-Light.woff') format('woff2'),
+       url('../fonts/Lato-Light.woff2') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Lato-Regular' , sans-serif;
   src: local('Lato-Regular'),
        url('../fonts/Lato-Regular.woff') format('woff2'),
@@ -9,11 +19,41 @@
 }
 
 @font-face {
+  font-family: 'Lato-SemiBold' , sans-serif;
+  src: local('Lato-SemiBold'),
+       url('../fonts/Lato-SemiBold.woff') format('woff2'),
+       url('../fonts/Lato-SemiBold.woff2') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Lato-Bold' , sans-serif;
   src: local('Lato-Bold'),
        url('../fonts/Lato-Bold.woff') format('woff2'),
        url('../fonts/Lato-Bold.woff2') format('woff');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Signika-Light' , sans-serif;
+  src: local('Signika-Light'),
+       url('../fonts/Signika-Light.woff') format('woff2'),
+       url('../fonts/Signika-Light.woff2') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Signika-Regular' , sans-serif;
+  src: local('Signika-Regular'),
+       url('../fonts/Signika-Regular.woff') format('woff2'),
+       url('../fonts/Signika-Regular.woff2') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

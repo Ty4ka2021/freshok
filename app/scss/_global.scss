@@ -1,11 +1,11 @@
 body {
   font-size: 14px;
   @extend %lato-700;
-  @extend %grey;
+  @extend %dark-500;
 }
 
 .title {
-  @extend %signika-600, %dark;
+  @extend %signika-600, %dark-900;
   font-size: 32px;
   line-height: 1.4;
 }

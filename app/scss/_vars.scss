@@ -1,11 +1,31 @@
+%lato-300 {
+  font-family: 'Lato-Light' , sans-serif;
+  font-weight: 300;
+}
+
 %lato-400 {
   font-family: 'Lato-Regular' , sans-serif;
   font-weight: 400;
 }
 
+%lato-600 {
+  font-family: 'Lato-SemiBold' , sans-serif;
+  font-weight: 600;
+}
+
 %lato-700 {
   font-family: 'Lato-Bold' , sans-serif;
   font-weight: 700;
+}
+
+%signika-300 {
+  font-family: 'Signika-Light' , sans-serif;
+  font-weight: 300;
+}
+
+%signika-400 {
+  font-family: 'Signika-Regular' , sans-serif;
+  font-weight: 400;
 }
 
 %signika-600 {
@@ -18,18 +38,51 @@
   font-weight: 700;
 }
 
-%dark {
+%green-900 {
+  color: #63a60e;
+}
+
+%green-200 {
+  color: #e0efcf;
+}
+
+%green-100 {
+  color: #eff6e7;
+}
+
+%dark-900 {
   color: #121212;
 }
 
-%grey {
+%dark-800 {
+  color: #31352B;
+}
+
+%dark-500 {
   color: #505050;
 }
 
-%red {
+%red-900 {
   color: #cf3e3b;
 }
 
-%green {
-  color: #63a60e;
+%orange-900 {
+  color: #ff7a00;
 }
+
+%yellow-900 {
+  color: #ffb800;
+}
+
+%silver-600 {
+  color: #c1c1c1;
+}
+%silver-100 {
+  color: #f6f6f6;
+}
+
+%white {
+  color: #fff;
+}
+
+
