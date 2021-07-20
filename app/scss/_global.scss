@@ -1,13 +1,14 @@
 body {
   font-size: 14px;
-  @extend %lato-700;
-  @extend %dark-500;
+  @extend %lato-400;
+  color: $dark-500;
+  line-height: 1.4;
 }
 
 .title {
-  @extend %signika-600, %dark-900;
+  @extend %signika-600;
+  color: $dark-900;
   font-size: 32px;
-  line-height: 1.4;
 }
 
 .container {
