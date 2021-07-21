@@ -118,7 +118,6 @@
   }
 }
 
-
 .search {
   display: flex;
   position: relative;
@@ -170,8 +169,8 @@
   &__btn:focus {
     box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
   }
-
 }
+
 .user {
   margin-right: 10px;
   display: flex;
@@ -238,13 +237,13 @@
     padding: 24px 24px 33px;
     font-size: 60px;
     line-height: 78px;
-    max-width: 758px;
+    max-width: 885px;
     width: 100%;
-    
   }
 
   &__span {
     color:  $red-900;
+    display: block;
   }
 
   &__text {
@@ -298,7 +297,7 @@
 
 .advantages {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: $silver-100;
   &__items {
     padding: 48px;
@@ -341,7 +340,8 @@
     @extend %lato-700;
     font-size: 16px;
     color: $dark-900;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    text-transform: none;
   }
 
   &__text {
@@ -361,7 +361,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 482px;
-    margin: 0 auto 50px;
+    margin: 0 auto 35px;
   }
 
   &-filter__btn {
@@ -408,17 +408,19 @@
   flex-wrap: wrap;
   margin: 0 -15px 48px;
   
-
   &__card {
     width: calc(25% - 30px);
     margin: 15px;
     min-height: 410px;
     border: 1px solid rgba(17, 17, 17, 0.2);
     padding: 12px 0 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__card-top {
-    padding: 0 12px 7px;
+    padding: 0 12px;
     display: flex;
     justify-content: space-between;
   }
@@ -479,7 +481,6 @@
     max-width: 264px;
     @extend %lato-600;
     color: $dark-900;
-    margin-bottom: 50px;
   }
 
   &__box {
@@ -537,76 +538,6 @@
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer{
   background-color: $dark-800;
@@ -686,7 +617,10 @@
     width: 100%;  
   }
 
-  
+  &__link:hover {
+    opacity: 0.7;
+  }
+
   &__contacts-link {
     display: block;
     margin-bottom: 18px;
@@ -735,9 +669,6 @@
     opacity: 0.7;
   }
 }
-
-
-
 
 
 @import "media";
