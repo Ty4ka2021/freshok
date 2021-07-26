@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ФРЕШОК</title>
+  <title>ФРЕШОК/Home</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -14,14 +14,20 @@
     <div class="header__top">
       <div class="container">
         <div class="header__wrapper header__wrapper--top">
-          <div class="header__links">
-            <a class="header__link header__link--address" href="#">
-              адрес и время доставки
-            </a>
-            <a class="header__link header__link--tel" href="#">
-              горячая линия 24/7
-            </a>
-          </div>
+          <ul class="header__links">
+            <li class="header__links-item">
+              <a class="header__link header__link--address" href="#">
+                адрес и время доставки
+              </a>
+            </li>
+            <li class="header__links-item">
+              <a class="header__link header__link--tel" href="#">
+                горячая линия 24/7
+              </a>
+            </li>
+
+
+          </ul>
           <nav class="header__nav">
             <ul class="header__list">
               <li class="header__item">
@@ -42,546 +48,503 @@
     <div class="header__bottom">
       <div class="container">
         <div class="header__wrapper header__wrapper--bottom">
-          <a class="header__logo" href="#">
-            <img class="header__img" src="images/logo.svg" alt="Логотип">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/sprite.svg#logo" alt="Логотип">
           </a>
-          <a class="header__catalog" href="#">
+          <button class="header__catalog" type="button">
+            <svg class="header__catalog-img">
+              <use xlink:href="images/sprite.svg#catalog"></use>
+            </svg>
             Каталог продуктов
-          </a>
-          <div class="header__search-box">
-            <form class="search">
-              <input class="search__input" type="text" placeholder="Найти в магазине ..." required>
-              <button class="search__btn">поиск</button>
-            </form>
-          </div>
+          </button>
+          <form class="search">
+            <input class="search__input" type="search" name="search" placeholder="Найти в магазине ..." required>
+            <button class="search__btn" type="submit">поиск</button>
+          </form>
 
-          <div class="user">
-            <a href="#" class="user__link">
-              <img class="user__img" src="images/icon-user.svg" alt="кабинет">
-            </a>
-            <a href="#" class="user__link">
-              <span class="user__num">12</span>
-              <img class="user__img" src="images/icon-heart.svg" alt="избранное">
-            </a>
-            <a href="#" class="user__link">
-              <span class="user__num">12</span>
-              <img class="user__img" src="images/icon-cart.svg" alt="корзина">
-            </a>
-          </div>
+
+          <ul class="user">
+            <li class="user__link">
+              <a class="" href="#">
+                <svg class="user__img">
+                  <use xlink:href="images/sprite.svg#user"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="user__link">
+              <a class="" href="#">
+                <span class="user__num">12</span>
+                <svg class="user__img">
+                  <use xlink:href="images/sprite.svg#heart"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="user__link">
+              <a class="" href="#">
+                <span class="user__num">12</span>
+                <svg class="user__img">
+                  <use xlink:href="images/sprite.svg#cart"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </header>
 
+  <ul class="carousel">
+    <li class="carousel__img" style="background-image: url('images/slider-bg-1.jpg');">
+      <div class="container">
+        <div class="carousel__wrapper">
+          <div class="carousel__box">
+            <div class="carousel__title">
+              свежачок вам в хату
+              <span class="carousel__span">
+                скидка -50%
+              </span>
+            </div>
+            <div class="carousel__text">
+              <p>
+                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+              </p>
+            </div>
+          </div>
+          <button class="carousel__btn btn" type="button">Купить сейчас</button>
+        </div>
+      </div>
+    </li>
+    <li class="carousel__img" style="background-image: url('images/slider-bg-2.jpg');">
+      <div class="container">
+        <div class="carousel__wrapper">
+          <div class="carousel__box">
+            <div class="carousel__title">
+              накрути себе томатов
+              <span class="carousel__span">
+                акция: 3 кг по цене 1
+              </span>
+            </div>
+            <div class="carousel__text">
+              <p>
+                Только с 12 по 15 июля скидка на домашние помидорчики
+              </p>
+            </div>
+          </div>
+          <button class="carousel__btn btn" type="button">Купить сейчас</button>
+        </div>
+      </div>
+    </li>
+    <li class="carousel__img" style="background-image: url('images/slider-bg-3.jpg');">
+      <div class="container">
+        <div class="carousel__wrapper">
+          <div class="carousel__box">
+            <div class="carousel__title">
+              Пусть остальные
+              позеленеют от зависти
+              <span class="carousel__span">
+                Распродажа зелени
+              </span>
+            </div>
+          </div>
+          <button class="carousel__btn btn" type="button">Купить сейчас</button>
+        </div>
+      </div>
+      </div>
+  </ul>
+
+  <div class="advantages">
+    <div class="container">
+      <ul class="advantages__items">
+        <li class="advantages__item advantages__item--delivery">
+          <span class="advantages__title">Бесплатная доставка</span>
+          <span class="advantages__text">
+            Для заказов на сумму от 500 ₽
+          </span>
+        </li>
+        <li class="advantages__item advantages__item--return">
+          <span class="advantages__title">Возврат товара</span>
+          <span class="advantages__text">
+            Если товары были испорчены
+          </span>
+        </li>
+        <li class="advantages__item advantages__item--support">
+          <span class="advantages__title">Поддержка 24/7</span>
+          <span class="advantages__text">
+            Лучшие операторы
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <main class="main">
-    <div class="slider__carousel">
-      <div class="slider" style="background-image: url('images/slider-bg-1.jpg');">
-        <div class="container">
-          <div class="slider__wrapper">
-            <div class="slider__box">
-              <h1 class="slider__title">
-                свежачок вам в хату
-                <span class="slider__span">
-                  скидка -50%
-                </span>
-              </h1>
-              <div class="slider__text">
-                <p>
-                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-                </p>
-              </div>
-            </div>
-            <a href="#" class="slider__btn">Купить сейчас</a>
-          </div>
-        </div>
-      </div>
-      <div class="slider" style="background-image: url('images/slider-bg-2.jpg');">
-        <div class="container">
-          <div class="slider__wrapper">
-            <div class="slider__box">
-              <h1 class="slider__title">
-                НАКРУТИ СЕБЕ ТОМАТОВ
-                <span class="slider__span">
-                  АКЦИЯ: 3 кг по цене 1
-                </span>
-              </h1>
-              <div class="slider__text">
-                <p>
-                  Только с 12 по 15 июля скидка на домашние помидорчики
-                </p>
-              </div>
-            </div>
-            <a href="#" class="slider__btn">Купить сейчас</a>
-          </div>
-        </div>
-      </div>
-      <div class="slider" style="background-image: url('images/slider-bg-3.jpg');">
-        <div class="container">
-          <div class="slider__wrapper">
-            <div class="slider__box">
-              <h1 class="slider__title">
-                Пусть остальные
-                позеленеют от зависти
-                <span class="slider__span">
-                  Распродажа зелени
-                </span>
-              </h1>
-            </div>
-            <a href="#" class="slider__btn">Купить сейчас</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="advantages">
-      <div class="container">
-        <div class="advantages__items">
-          <div class="advantages__item advantages__item--delivery">
-            <h6 class="advantages__title">Бесплатная доставка</h6>
-            <div class="advantages__text">
-              Для заказов на сумму от 500 ₽
-            </div>
-          </div>
-          <div class="advantages__item advantages__item--return">
-            <h6 class="advantages__title">Возврат товара</h6>
-            <div class="advantages__text">
-              Если товары были испорчены
-            </div>
-          </div>
-          <div class="advantages__item advantages__item--support">
-            <h6 class="advantages__title">Поддержка 24/7</h6>
-            <div class="advantages__text">
-              Лучшие операторы
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <section class="top">
+    <section class="top-products">
       <div class="container">
-        <h2 class="title top__title">
+        <h2 class="title top-products__title">
           Топовые товары
         </h2>
-        <ul class="top-filter">
-          <li class="top-filter__item">
-            <button class="top-filter__btn" type="button" data-filter="all">
+        <ul class="filter">
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter="all">
               Все товары
             </button>
           </li>
-          <li class="top-filter__item">
-            <button class="top-filter__btn" type="button" data-filter=".category-fruits">
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-fruits">
               Фрукты
             </button>
           </li>
-          <li class="top-filter__item">
-            <button class="top-filter__btn" type="button" data-filter=".category-vegetables">
-              ОВОЩИ
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-vegetables">
+              Овощи
             </button>
           </li>
-          <li class="top-filter__item">
-            <button class="top-filter__btn" type="button" data-filter=".category-beverages">
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-beverages">
               Напитки
             </button>
           </li>
-          <li class="top-filter__item">
-            <button class="top-filter__btn" type="button" data-filter=".category-grocery">
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-grocery">
               Бакалея
             </button>
           </li>
         </ul>
 
-        <ul class="product">
 
-          <li class="product__card mix category-fruits">
-            <div class="product__card-top">
-              <div class="product__badges">
-                <div class="product__badge product__badge--green">новинка</div>
-                <div class="product__badge product__badge--red">-50%</div>
-              </div>
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/pineapple.jpg" alt="Ананас">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Ананас, 1кг</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price">999 ₽</span>
-                  <span class="product__price product__price--full">1999 ₽</span>
+
+
+
+        <ul class="products">
+          <li>
+            <article class="card mix category-fruits">
+              <div class="card-top">
+                <div class="badge">
+                  <div class="badge__item badge__item--green">новинка</div>
+                  <div class="badge__item  badge__item--red">-50%</div>
                 </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
                   </svg>
                 </button>
               </div>
-            </div>
+              <a class="card__card-body" href="#">
+                <img class="card__img" src="images/top_product/pineapple.jpg" alt="Ананас">
+                <h3 class="card__name">Ананас, 1кг</h3>
+              </a>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item">999 ₽</span>
+                    <span class="price__item price__item--full">1999 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="button">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card mix category-fruits">
+              <div class="card-top">
+                <div class="badge"></div>
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="card__card-body">
+                <img class="card__img" src="images/top_product/lemon.jpg" alt="Лимон">
+                <h3 class="card__name">Лимон, 1кг</h3>
+              </div>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item">199 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="submit">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
           </li>
 
-          <li class="product__card mix category-fruits">
-            <div class="product__card-top">
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/lemon.jpg" alt="Лимон">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Лимон, 1кг</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price">199 ₽</span>
+          <li>
+            <article class="card mix category-vegetables">
+              <div class="card-top">
+                <div class="badge">
+                  <div class="badge__item badge__item--orange">хит</div>
                 </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
                   </svg>
                 </button>
               </div>
-            </div>
+              <div class="card__card-body">
+                <img class="card__img" src="images/top_product/dragon.jpg" alt="Питахайя">
+                <h3 class="card__name">Питахайя красная с белой мякотью, 1шт</h3>
+              </div>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item">1019 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="submit">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
           </li>
 
-          <li class="product__card mix category-fruits">
-            <div class="product__card-top">
-              <div class="product__badges">
-                <div class="product__badge product__badge--orange">хит</div>
-              </div>
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/dragon.jpg" alt="питахайя">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Питахайя красная с белой мякотью, 1шт</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price">1019 ₽</span>
-                </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </li>
 
-          <li class="product__card mix category-vegetables">
-            <div class="product__card-top">
-              <div class="product__badges">
-                <div class="product__badge product__badge--green">новинка</div>
-              </div>
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/paprik.jpg" alt="Ананас">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Перец оранжевый, 1кг</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price">349 ₽</span>
+          <li>
+            <article class="card mix category-vegetables">
+              <div class="card-top">
+                <div class="badge">
+                  <div class="badge__item badge__item--green">новинка</div>
                 </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
                   </svg>
                 </button>
               </div>
-            </div>
+              <div class="card__card-body">
+                <img class="card__img" src="images/top_product/paprik.jpg" alt="перец">
+                <h3 class="card__name">Перец оранжевый, 1кг</h3>
+              </div>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item">349 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="submit">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
           </li>
-
-          <li class="product__card mix category-vegetables">
-            <div class="product__card-top">
-              <div class="product__badges">
-                <div class="product__badge product__badge--orange">хит</div>
-              </div>
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/body.jpg" alt="морковь">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Морковь молодая с бабушкиной грядки, 1кг</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price">49 ₽</span>
+          <li>
+            <article class="card mix category-vegetables">
+              <div class="card-top">
+                <div class="badge">
+                  <div class="badge__item badge__item--orange">хит</div>
                 </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
                   </svg>
                 </button>
               </div>
-            </div>
+              <div class="card__card-body">
+                <img class="card__img" src="images/top_product/carrot.jpg" alt="морковь">
+                <h3 class="card__name">Морковь молодая с бабушкиной грядки, 1кг</h3>
+              </div>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item">49 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="submit">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
           </li>
-
-          <li class="product__card mix category-beverages">
-            <div class="product__card-top">
-              <div class="product__badges">
-                <div class="product__badge product__badge--red">-30%</div>
-              </div>
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/juice.jpg" alt="сок">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
-                безалкогольный...</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price product__price--full">299 ₽</span>
-                  <span class="product__price">199 ₽</span>
+          <li>
+            <article class="card mix category-beverages">
+              <div class="card-top">
+                <div class="badge">
+                  <div class="badge__item badge__item--red">-30%</div>
                 </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
                   </svg>
                 </button>
               </div>
-            </div>
+              <div class="card__card-body">
+                <img class="card__img" src="images/top_product/juice.jpg" alt="сок">
+                <h3 class="card__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
+                  безалкогольный...</h3>
+              </div>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item price__item--full">299 ₽</span>
+                    <span class="price__item">199 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="submit">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
           </li>
-
-          <li class="product__card mix category-grocery">
-            <div class="product__card-top">
-              <div class="product__badges">
-                <div class="product__badge product__badge--green">новинка</div>
-              </div>
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/coffee.jpg" alt="кофе">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Кофе с коноплей органический Caffé Salomoni 250г</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price">877 ₽</span>
+          <li>
+            <article class="card mix category-grocery">
+              <div class="card-top">
+                <div class=badge">
+                  <div class="badge__item badge__item--green">новинка</div>
                 </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
                   </svg>
                 </button>
               </div>
-            </div>
+              <div class="card__card-body">
+                <img class="card__img" src="images/top_product/coffee.jpg" alt="кофе">
+                <h3 class="card__name">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+              </div>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item">877 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="submit">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
           </li>
-
-          <li class="product__card mix category-vegetables">
-            <div class="product__card-top">
-              <div class="product__badges">
-              </div>
-              <button class="product__favorite-btn">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                    fill="#C1C1C1" />
-                </svg>
-              </button>
-            </div>
-            <div class="product__card-body">
-              <img class="product__img" src="images/top_product/ketchup.jpg" alt="кетчуп">
-            </div>
-            <div class="product__card-bottom">
-              <p class="product__name">Кетчуп томатный детский органический Bio-Zentrale 500мл</p>
-              <div class="product__box">
-                <div class="product__prices">
-                  <span class="product__price">600 ₽</span>
+          <li>
+            <article class="card mix category-vegetables">
+              <div class="card-top">
+                <div class="badge">
                 </div>
-                <button class="product__cart">
-                  <svg width="16" height="16" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M31.7978 4.03875C31.6226 3.81981 31.3574 3.69238 31.0769 3.69238H6.5095L5.8225 0.7155C5.72581 0.296688 5.35287 0 4.92306 0H0.923063C0.413312 0 0 0.413312 0 0.923125C0 1.43294 0.413312 1.84619 0.923063 1.84619H4.18875L8.852 22.0537C8.94863 22.4726 9.32162 22.7692 9.75144 22.7692H28.2461C28.7559 22.7692 29.1692 22.3559 29.1692 21.8462C29.1692 21.3364 28.7559 20.9231 28.2461 20.9231H10.4858L9.77581 17.8462H28.3078C28.7395 17.8462 29.1136 17.5469 29.2083 17.1257L31.9775 4.81806C32.0391 4.54444 31.9729 4.25775 31.7978 4.03875ZM27.5693 16H9.34975L6.93556 5.5385H29.9231L27.5693 16Z"
-                      fill="white" />
-                    <path
-                      d="M13.5384 24C11.6722 24 10.1538 25.5183 10.1538 27.3846C10.1538 29.2509 11.6721 30.7692 13.5384 30.7692C15.4047 30.7692 16.9231 29.2509 16.9231 27.3846C16.9231 25.5183 15.4047 24 13.5384 24ZM13.5384 28.9231C12.6901 28.9231 12 28.2329 12 27.3846C12 26.5363 12.6901 25.8462 13.5384 25.8462C14.3867 25.8462 15.0769 26.5363 15.0769 27.3846C15.0769 28.2329 14.3867 28.9231 13.5384 28.9231Z"
-                      fill="white" />
-                    <path
-                      d="M24.6153 24C22.7491 24 21.2307 25.5183 21.2307 27.3846C21.2307 29.2509 22.749 30.7692 24.6153 30.7692C26.4816 30.7692 28 29.2509 28 27.3846C28 25.5183 26.4817 24 24.6153 24ZM24.6153 28.9231C23.767 28.9231 23.0769 28.233 23.0769 27.3847C23.0769 26.5364 23.767 25.8462 24.6153 25.8462C25.4637 25.8462 26.1538 26.5364 26.1538 27.3847C26.1538 28.233 25.4637 28.9231 24.6153 28.9231Z"
-                      fill="white" />
+                <button class="card__favorite-btn">
+                  <svg class="card__favorite-img">
+                    <use xlink:href="images/sprite.svg#heart"></use>
                   </svg>
                 </button>
               </div>
-            </div>
+              <div class="card__card-body">
+                <img class="card__img" src="images/top_product/ketchup.jpg" alt="кетчуп">
+                <h3 class="card__name">Кетчуп томатный детский органический Bio-Zentrale 500мл</h3>
+              </div>
+              <div class="card-bottom">
+                <div class="card__box">
+                  <div class="price">
+                    <span class="price__item">600 ₽</span>
+                  </div>
+                  <button class="card__cart btn" type="submit">
+                    <svg class="card__cart-img">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
           </li>
         </ul>
 
-        <a class="top__link" href="#">Показать еще</a>
+        <button class="top-products__link link" type="button">Показать еще</button>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="container">
       <div class="footer__head">
-        <a class="footer__logo" href="#">
-          <img class="footer__img" src="images/logo.svg" alt="Логотип">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/sprite/logo.svg" alt="Логотип">
         </a>
       </div>
       <div class="footer__body">
         <div class="footer__newsletter">
           <p>Следите за нашими акциями</p>
           <form class="footer__form">
-            <input class="footer__input" type="email" placeholder="email@email.com" required>
-            <button class="footer__btn">подписаться</button>
+            <label for="email"></label>
+            <input class="footer__input" type="email" id="email" placeholder="email@email.com" required>
+            <button class="footer__btn btn" type="submit">подписаться</button>
           </form>
         </div>
-        <div class="footer__menu">
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              О нас
-            </a>
-          </div>
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              Оплата и доставка
-            </a>
-          </div>
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              Отзывы
-            </a>
-          </div>
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              Контакты
-            </a>
-          </div>
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              Вакансии
-            </a>
-          </div>
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              Новости
-            </a>
-          </div>
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              Публичная оферта
-            </a>
-          </div>
-          <div class="footer__box">
-            <a class="footer__link" href="#">
-              Акции
-            </a>
-          </div>
-        </div>
+        <nav class="footer__menu">
+          <ul class="footer__box">
+            <li class="footer__box-item">
+              <a class="footer__link" href="#">
+                О нас
+              </a>
+              <a class="footer__link" href="#">
+                Контакты
+              </a>
+              <a class="footer__link" href="#">
+                Публичная оферта
+              </a>
+            </li>
+            <li class="footer__box-item">
+              <a class="footer__link" href="#">
+                Оплата и доставка
+              </a>
+              <a class="footer__link" href="#">
+                Вакансии
+              </a>
+              <a class="footer__link" href="#">
+                Акции
+              </a>
+            </li>
+            <li class="footer__box-item">
+              <a class="footer__link" href="#">
+                Отзывы
+              </a>
+              <a class="footer__link" href="#">
+                Новости
+              </a>
+            </li>
+
+
+          </ul>
+        </nav>
         <div class="footer__contacts">
           <a class="footer__contacts-link footer__link--tel" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
-          <a class="footer__contacts-link footer__contacts-link--address" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+          <address>
+            <a class="footer__contacts-link footer__contacts-link--address" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+          </address>
           <div class="social">
             <a class="social__link" href="#">
-              <img class="social__icon" src="images/facebook.svg" alt="иконка фейсбука">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg>
             </a>
             <a class="social__link" href="#">
-              <img class="social__icon" src="images/youtube.svg" alt="иконка ютуба">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#youtube"></use>
+              </svg>
             </a>
             <a class="social__link" href="#">
-              <img class="social__icon" src="images/telegram.svg" alt="иконка телеграма">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#telegram"></use>
+              </svg>
             </a>
             <a class="social__link" href="#">
-              <img class="social__icon" src="images/instagram.svg" alt="иконка инстаграма">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg>
             </a>
           </div>
         </div>
@@ -592,15 +555,18 @@
         <div class="footer__wrapper">
           <span class="footer__span">© 2021 ФРЕШОК</span>
           <div class="footer__payment">
-            <img class="footer__payment-item" src="images/visa.svg" alt="visa">
-            <img class="footer__payment-item" src="images/mc.svg" alt="mastercard">
+            <svg class="footer__payment-img">
+              <use xlink:href="images/sprite.svg#visa"></use>
+            </svg>
+            <svg class="footer__payment-img">
+              <use xlink:href="images/sprite.svg#mc"></use>
+            </svg>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  
   <script src="js/main.min.js"></script>
 </body>
 

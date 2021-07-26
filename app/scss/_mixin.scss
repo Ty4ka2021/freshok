@@ -1,0 +1,14 @@
+@mixin wowborder($f, $width: 1px) {
+  border: {
+    color: $f;
+    width: $width;
+    style: solid;
+  };
+}
+
+@mixin bg ($src) {
+  background-image: $src;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
