@@ -174,8 +174,6 @@
       box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
     }
   }
-
-  
 }
 
 .user {
@@ -294,8 +292,6 @@
   }
 }
 
-
-
 .advantages {
   display: flex;
   justify-content: space-between;
@@ -364,34 +360,10 @@
     text-align: center;
     margin-bottom: 30px;
   }
-
-}
-
-.filter {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 45px;
-    &__item {
-      &:not(:last-child) {
-        margin-right: 27px;
-      }
-    }
-  
-    &__btn {
-      color: $dark-500;
-      @include Lato(700);
-      text-transform: uppercase;
-      font-size: 15px;
-      border-bottom: 3px solid transparent;
-      transition: border-bottom-color 0.3s;
-      &:hover {
-        border-bottom: 3px solid $green-200;
-      }
-    }
-    .mixitup-control-active {
-      border-bottom: 3px solid $green-200;
-    }
+  &__link {
+    margin-bottom: 72px;
   }
+}
 
 .products {
   text-align: left;
@@ -402,19 +374,17 @@
   margin: 0 -15px 48px;
 }
 
-  
-
 .card {
     width: 300px;
     margin-bottom: 15px;
-    @include wowborder($silver-600, 2px);
+    border: 2px solid $silver-600;
     padding: 12px 0 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: border 0.5s;
     &:hover {
-      @include wowborder($green-900, 2px);
+      border: 2px solid $green-800;
     }
     
     &-top {
@@ -510,14 +480,13 @@
     }
     }
 
-    
-
   .badge {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     
     &__item {
+      display: inline-block;
       justify-self: flex-start;
       @include Lato(700);
       font-size: 10px;
@@ -542,6 +511,217 @@
       }
     }
   }
+
+.banners {
+  display: grid;
+  min-height: 300px;
+  text-align: left;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-column-gap: 30px;
+		&__item {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 76px 86px 76px 32px;
+      &--white {
+        color: $white;
+        .banners__link {
+          border-bottom-color: $white;
+          
+           &:hover {
+             color: $dark-500;
+            border-bottom-color: $dark-500;
+          }
+        }
+      }
+		}
+
+		&__subtitle {
+      text-transform: uppercase;
+      @include Lato(700);
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      margin-bottom: 18px;
+		}
+
+		&__title {
+      @include Signika(600);
+      font-size: 30px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+		}
+
+		&__link {
+      @include Lato(700);
+      text-transform: uppercase;
+      line-height: 1; 
+      padding-bottom: 6px;
+      border-bottom: 2px solid $dark-500;
+      transition: all 0.3s;
+      &:hover {
+        color: $white;
+        border-bottom-color: $white;
+      }
+		}
+}
+
+.promo {
+  background-color: $dark-100;
+  padding: 72px 0;
+  text-align: center;
+		&__title {
+      text-align: center;
+      margin-bottom: 32px;
+		}
+
+    &__list {
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+		}
+
+		&__item {
+      width: 300px;
+      display: inline-block;
+      margin-bottom: 15px;
+      border: 2px solid $silver-600;
+      transition: border 0.5s;
+      &:hover {
+        border: 2px solid $dark-500;
+      }
+		}
+
+    &__link {
+      display: inline-block;
+      color: $white;
+      font-size: 18px;
+      @include Lato(400);
+      padding: 12px 24px;
+    }
+}
+
+.promo-cards {
+  text-align: left;
+    display: flex;
+    align-items: center;
+    
+		&__box {
+      max-width: 100px;
+      position: relative;
+      .badge__item {
+        position: absolute;
+      }
+		}
+
+		&__img {
+      width: 100%;
+      min-height: 100px;
+      height: 100%;
+      object-fit: cover;
+      
+		}
+
+		&__body {
+      padding: 13px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+		}
+
+		&__title {
+      @include Lato(600);
+      color: $dark-900;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+		}
+
+		&__availability {
+      @include Lato(600);
+      font-size: 12px;
+      line-height: 1;
+      text-transform: uppercase;
+
+		}
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+    
+		&__item {
+      margin-right: 12px;
+		}
+
+		&__item--full {
+		}
+
+		&__star {
+      &-img {
+        width: 16px;
+        height: 16px;
+      }
+		}
+}
+
+.promo-cards--prise {
+  flex-direction: row;
+}
+
+.promo-cards__availability--instock {
+  color: $green-900;
+}
+
+.promo-cards__availability--ends {
+  color: $red-900;
+}
+
+.promo-cards--prise {
+}
+
+.brands {
+  padding: 72px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-img {
+    max-width: 80px;
+    width: 100%;
+  }
+}
+
+.news {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+  }
+
+  &__item {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+  }
+  
+  &__img {
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    max-width: 410px;
+    width: 100%;
+    padding: 0 18px 18px 18px;
+    font-size: 18px;
+    @include Lato(600);
+    color: $dark-900;
+  }
+}
 
 .footer{
   background-color: $dark-800;
@@ -578,8 +758,6 @@
       color: $dark-800;
     }
   }
-
-  
 
   &__btn {
     text-transform: uppercase;
@@ -618,8 +796,6 @@
     }
   }
 
-  
-
   &__contacts-link {
     display: block;
     margin-bottom: 18px;
@@ -636,10 +812,6 @@
       margin: 0 0 18px;
     }
   }
-
-  
-
-  
 
   &__bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -680,6 +852,4 @@
       height: 32px;
     }
   }
-
-  
 }

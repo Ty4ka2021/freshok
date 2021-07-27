@@ -26,7 +26,6 @@
               </a>
             </li>
 
-
           </ul>
           <nav class="header__nav">
             <ul class="header__list">
@@ -61,7 +60,6 @@
             <input class="search__input" type="search" name="search" placeholder="Найти в магазине ..." required>
             <button class="search__btn" type="submit">поиск</button>
           </form>
-
 
           <ul class="user">
             <li class="user__link">
@@ -178,14 +176,12 @@
   </div>
 
   <main class="main">
-
-
     <section class="top-products">
       <div class="container">
         <h2 class="title top-products__title">
           Топовые товары
         </h2>
-        <ul class="filter">
+        <ul class="filter filter__top-products">
           <li class="filter__item">
             <button class="filter__btn" type="button" data-filter="all">
               Все товары
@@ -212,10 +208,6 @@
             </button>
           </li>
         </ul>
-
-
-
-
 
         <ul class="products">
           <li>
@@ -278,7 +270,6 @@
               </div>
             </article>
           </li>
-
           <li>
             <article class="card mix category-vegetables">
               <div class="card-top">
@@ -309,8 +300,6 @@
               </div>
             </article>
           </li>
-
-
           <li>
             <article class="card mix category-vegetables">
               <div class="card-top">
@@ -463,11 +452,305 @@
             </article>
           </li>
         </ul>
-
         <button class="top-products__link link" type="button">Показать еще</button>
+
+        <div class="banners">
+          <div class="banners__item banners__item--white" style="background-image: url('images/banners/fruits.jpg')">
+            <div class="banners__subtitle">
+              свежайшие фрукты
+            </div>
+            <h4 class="banners__title">
+              начни фруктовое лето всего от 99 ₽
+            </h4>
+            <a class="banners__link" href="#">
+              перейти к покупкам
+            </a>
+          </div>
+          <div class="banners__item" style="background-image: url('images/banners/vegetables.jpg');">
+            <div class="banners__subtitle">
+              сезонная распродажа
+            </div>
+            <h4 class="banners__title">
+              овощепад до -50%
+            </h4>
+            <a class="banners__link" href="#">
+              перейти к покупкам
+            </a>
+          </div>
+          <div class="banners__item" style="background-image: url('images/banners/bread.jpg')">
+            <div class="banners__subtitle">
+              ням-ням
+            </div>
+            <h4 class="banners__title">
+              свежий хлебчик
+            </h4>
+            <a class="banners__link" href="#">
+              перейти к покупкам
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div class="container">
+        <h2 class="title promo__title">
+          акции
+        </h2>
+        <ul class="filter promo__filter">
+          <li class="filter__item">
+            <button class="filter__btn">
+              все товары
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn">
+              Новинки
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn">
+              хиты
+            </button>
+          </li>
+        </ul>
+
+        <ul class="promo__list">
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/pineapple.jpg" alt="Ананас">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                <div class="promo-cards__availability promo-cards__availability--instock">
+                  в наличии
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">999 ₽</span>
+                  <span class="price__item price__item--full">1999 ₽</span>
+                  <span class="price__star">4.5
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/coffee.jpg" alt="кофе">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+                <div class="promo-cards__availability promo-cards__availability--ends">
+                  заканчивается
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">777 ₽</span>
+                  <span class="price__item price__item--full">877 ₽</span>
+                  <span class="price__star">4.9
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/strawberryes.jpg" alt="клубника">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Клубника, 1 кг</h3>
+                <div class="promo-cards__availability promo-cards__availability--instock">
+                  в наличии
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">999 ₽</span>
+                  <span class="price__item price__item--full">1999 ₽</span>
+                  <span class="price__star">4.5
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/pineapple.jpg" alt="Ананас">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                <div class="promo-cards__availability promo-cards__availability--instock">
+                  в наличии
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">999 ₽</span>
+                  <span class="price__item price__item--full">1999 ₽</span>
+                  <span class="price__star">4.5
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/pineapple.jpg" alt="Ананас">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                <div class="promo-cards__availability promo-cards__availability--instock">
+                  в наличии
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">999 ₽</span>
+                  <span class="price__item price__item--full">1999 ₽</span>
+                  <span class="price__star">4.5
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/pineapple.jpg" alt="Ананас">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                <div class="promo-cards__availability promo-cards__availability--instock">
+                  в наличии
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">999 ₽</span>
+                  <span class="price__item price__item--full">1999 ₽</span>
+                  <span class="price__star">4.5
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/pineapple.jpg" alt="Ананас">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                <div class="promo-cards__availability promo-cards__availability--instock">
+                  в наличии
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">999 ₽</span>
+                  <span class="price__item price__item--full">1999 ₽</span>
+                  <span class="price__star">4.5
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="promo__item">
+            <a class="promo-cards" href="#">
+              <div class="promo-cards__box">
+                <div class="badge__item badge__item--green">новинка</div>
+                <img class="promo-cards__img" src="images/top_product/pineapple.jpg" alt="Ананас">
+              </div>
+              <div class="promo-cards__body">
+                <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                <div class="promo-cards__availability promo-cards__availability--instock">
+                  в наличии
+                </div>
+                <div class="price promo-cards--prise">
+                  <span class="price__item">999 ₽</span>
+                  <span class="price__item price__item--full">1999 ₽</span>
+                  <span class="price__star">4.5
+                    <svg class="price__star-img">
+                      <use xlink:href="images/sprite.svg#star"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button class="promo__link btn" type="button">Показать еще</button>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="container">
+        <div class="brands">
+          <svg class="brands-img">
+            <use xlink:href="images/sprite.svg#sprite"></use>
+          </svg>
+          <svg class="brands-img">
+            <use xlink:href="images/sprite.svg#dr-pepper"></use>
+          </svg>
+          <svg class="brands-img">
+            <use xlink:href="images/sprite.svg#coca-cola"></use>
+          </svg>
+          <svg class="brands-img">
+            <use xlink:href="images/sprite.svg#pepsi"></use>
+          </svg>
+          <svg class="brands-img">
+            <use xlink:href="images/sprite.svg#redbull"></use>
+          </svg><svg class="brands-img">
+            <use xlink:href="images/sprite.svg#fanta"></use>
+          </svg>
+        </div>
+        <h2 class="title news__title">НАШИ НОВОСТИ</h2>
+        <div class="news__items">
+          <div class="news__item">
+            <img class="news__img" src="images/news/1.jpg" alt="">
+            <p class="news__text">
+              Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
+            </p>
+          </div>
+          <div class="news__item">
+            <img class="news__img" src="images/news/2.jpg" alt="">
+            <p class="news__text">
+            Шикарнейший выбор манго в нашем онлайн-маркете
+            </p>
+          </div>
+          <div class="news__item">
+            <img class="news__img" src="images/news/3.jpg" alt="">
+            <p class="news__text">
+              Всё, что вы хотели знать о папайя
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__head">
@@ -516,10 +799,9 @@
                 Новости
               </a>
             </li>
-
-
           </ul>
         </nav>
+        
         <div class="footer__contacts">
           <a class="footer__contacts-link footer__link--tel" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
           <address>
