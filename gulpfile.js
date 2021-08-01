@@ -3,6 +3,7 @@ const { src, dest, watch, parallel, series } = require('gulp');
 const scss         = require('gulp-sass');
 const concat       = require('gulp-concat');
 const browserSync  = require('browser-sync').create();
+const ssi  = require('browsersync-ssi');
 const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
@@ -14,8 +15,9 @@ const del          = require('del');
 function browsersync() {
     browserSync.init({
         server: {
-            baseDir: 'app/'
-        }
+            baseDir: 'app/',
+            middleware: ssi({baseDir: 'app/', ext: '.html'}),
+        },
     });
 }
 
@@ -82,7 +84,7 @@ function scripts() {
 function styles() {
   return src([
     'app/scss/style.scss',
-    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/slick-carousel/slick/slick.scss',
 
   ])
         .pipe(scss({outputStyle: 'compressed'}))

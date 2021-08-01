@@ -1,0 +1,85 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__wrapper header__wrapper--top">
+        <ul class="header__links">
+          <li class="header__links-item">
+            <a class="header__link header__link--address" href="#">
+              адрес и время доставки
+            </a>
+          </li>
+          <li class="header__links-item">
+            <a class="header__link header__link--tel" href="#">
+              горячая линия 24/7
+            </a>
+          </li>
+
+        </ul>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#">доставка</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">о нас</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">новости</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__wrapper header__wrapper--bottom">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/sprite/logo.svg" alt="Логотип">
+        </a>
+        <button class="header__catalog" type="button">
+          <svg class="header__catalog-img">
+            <use xlink:href="images/sprite.svg#catalog"></use>
+          </svg>
+          Каталог продуктов
+        </button>
+        <form class="search">
+          <label class="sr-only" for="search">Найти в магазине</label>
+          <input class="search__input" id="search" type="search" name="search" placeholder="Найти в магазине ..."
+            required>
+          <button class="search__btn" type="submit">поиск</button>
+        </form>
+
+        <ul class="user">
+          <li class="user__item">
+            <a class="user__link" href="#">
+              <span class="sr-only">профиль</span>
+              <svg class="user__img">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="user__item">
+            <a class="user__link" href="#">
+              <span class="user__num">12</span>
+              <span class="sr-only">избранные товары</span>
+              <svg class="user__img">
+                <use xlink:href="images/sprite.svg#heart"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="user__item">
+            <a class="user__link" href="#">
+              <span class="user__num">12</span>
+              <span class="sr-only">корзина</span>
+              <svg class="user__img">
+                <use xlink:href="images/sprite.svg#cart"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

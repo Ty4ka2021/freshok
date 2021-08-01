@@ -1,0 +1,120 @@
+.footer{
+  background-color: $dark-800;
+  color: $white;
+  &__head {
+    padding: 30px 0;
+    
+  }
+
+  &__body {
+    padding: 0 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__newsletter  {
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    border: none;
+    max-width: 182px;
+    width: 100%;
+    border-radius: 6px 0 0 6px;
+    padding: 10px 12px 10px 12px;
+    &::placeholder {
+      @include Lato(400);
+      color: $dark-800;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.1;
+    border-radius: 0 6px 6px 0;
+    padding: 12px;
+    width: 118px;
+    @include Lato(400);
+    color: $white;
+  }
+
+  &__menu {
+    max-width: 468px;
+    width: 100%;
+  }
+
+  &__box {
+    column-count: 3;
+    margin-left: 50px;
+    &-item {
+      
+    }
+  }
+
+  &__link {
+    transition: opacity 0.3s;
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+    
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__address {
+    font-style: normal;
+    margin: 18px 0;
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__payment {
+    display: flex;
+  }
+
+  &__payment-img {
+    width: 93px;
+    height: 29px;
+    &:not(:first-child) {
+      margin-left: 24px;
+      width: 50px;
+    }
+  }
+
+  &__span {
+    text-transform: uppercase;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  &__link{
+    margin-right: 12px;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    &-img{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

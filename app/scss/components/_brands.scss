@@ -1,0 +1,14 @@
+.brands {
+  &__box {
+    padding: 25px 0;
+  }
+
+  &__item {
+    text-align: center;
+  }
+  
+  &__box-img {
+    max-width: 80px;
+    width: 100%;
+  }
+}
