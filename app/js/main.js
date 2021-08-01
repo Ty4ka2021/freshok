@@ -10,6 +10,14 @@ $(function () {
     cssEase: 'linear'
   });
 
+  $('.user__link--cart').on('click', function () {
+    $('.cart').toggleClass('cart--active');
+  });
+
+  $('.cart__close').on('click', function () {
+    $('.cart').toggleClass('cart--active');
+  });
+
 
   
 
