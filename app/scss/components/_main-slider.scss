@@ -21,6 +21,7 @@
     padding: 24px;
     max-width: 885px;
   }
+  
   &__title {
     @include Signika(700);
     font-size: 60px;
@@ -65,10 +66,120 @@
   }
 
   .slick-prev {
-    left: 65px;
+    left: 10px;
   }
 
   .slick-next {
     right: 60px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+     button {
+      background-color: $white;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      font-size: 0;
+      padding: 0;
+      border: 1px solid $silver-600;
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: $green-900;
+      border-color: $green-900;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .main-slider {
+    &__title {
+      font-size: 55px;
+    }
+    &__wrapper {
+      height: 400px;
+    }
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 870px) {
+  .main-slider {
+    &__title {
+      font-size: 43px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 670px) {
+  .main-slider {
+    &__title {
+      font-size: 30px;
+    }
+    &__wrapper {
+      height: 300px;
+    }
   }
 }

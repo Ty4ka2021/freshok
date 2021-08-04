@@ -12,3 +12,12 @@
     width: 100%;
   }
 }
+
+@media (max-width: 870px) {
+  .brands {
+    &__box {
+      padding: 0;
+    }
+  }
+}
+

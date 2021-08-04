@@ -64,14 +64,13 @@
 
   &__img {
     width: 100%;
-    height: 215px;
+    height: 100%;
     object-fit: cover;
   }
 
   &__subtitle {
     max-width: 290px;
     font-weight: 600;
-  // include: hidder(3)
     margin-bottom: auto;
     padding: 12px 18px 0;
   }
@@ -87,7 +86,6 @@
     max-width: 100px;
     color: $dark-500;
     line-height: 1.2;
-    // include: hidder(3)
   }
 
   &__oldprice {
@@ -95,7 +93,6 @@
     display: block;
     color: $silver-600;
     position: relative;
-    //
     &::after {
       content: '';
       position: absolute;
@@ -109,13 +106,40 @@
   }
 } 
 
+.filter {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 45px;
+      &__item {
+        &:not(:last-child) {
+          margin-right: 27px;
+        }
+      }
+
+      &__btn {
+        color: $dark-500;
+        @include Lato(700);
+        text-transform: uppercase;
+        font-size: 17px;
+        border-bottom: 3px solid transparent;
+        transition: border-bottom-color 0.3s;
+        &:hover {
+          border-bottom: 3px solid $green-200;
+        }
+      }
+
+  .mixitup-control-active {
+    border-bottom: 3px solid $green-200;
+  }
+}
+
 .banners {
   display: grid;
-  min-height: 300px;
   text-align: left;
   grid-template-columns: 2fr 1fr 1fr;
   grid-column-gap: 30px;
 		&__item {
+      min-height: 300px;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -163,4 +187,82 @@
       }
       }
 		}
+}
+
+@media (max-width: 1200px) {
+  .banners {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+    &__item {
+      padding: 60px 50px 50px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .products {
+    margin-bottom: 0;
+  }
+  .top-products{
+    padding: 30px 0;
+
+    &__link {
+      margin-bottom: 30px;
+    }
+  }
+
+  .banners {
+    grid-template-columns: 1fr;
+  }
+
+  .filter {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    
+      &__item {
+        margin-bottom: 15px;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+  }
+}
+
+@media (max-width: 670px) {
+  .products {
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .product-card {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 430px) {
+  .banners {
+    &__item {
+      padding: 35px 20px 35px 20px;
+    }
+  }
+
+  .products {
+    &__item {
+      margin-bottom: 10px;
+    }
+  }
+
+  .product-card {
+    max-width: 170px;
+  }
+
+  .filter {
+    margin-bottom: 0;
+  }
 }

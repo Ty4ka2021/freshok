@@ -2,8 +2,20 @@
   font-size: 18px;
   @include Lato(600);
   color: $dark-900;
-  &__title {
-    margin-bottom: 30px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  &__header-link {
+    color: $green-900;
+    text-transform: uppercase;
+    border-bottom: 2px solid $green-900;
+    &:hover {
+      color: $green-800;
+    }
   }
 
   &__items {
@@ -11,6 +23,10 @@
     justify-content: space-between;
     align-items: stretch;
     margin-bottom: 75px;
+  }
+
+  &__item {
+    margin: 0 10px;
   }
 
   &__box {
@@ -52,5 +68,36 @@
     width: 100%;
     padding: 0 18px 18px 18px;
     
+  }
+}
+
+@media (max-width: 870px) {
+  .news {
+    &__items {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .news {
+
+    &__header {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__items {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__item {
+      margin-bottom: 15px;
+    }
   }
 }

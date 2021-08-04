@@ -6,8 +6,8 @@
           <h3 class="cart__title">Корзина</h3>
           <button class="cart__clear">очистить корзину</button>
         </div>
-        <button class="cart__close" type="btn">
-          <svg class="cart__close-img" width="24" height="24">
+        <button class="close close--cart" type="btn">
+          <svg class="close-img" width="24" height="24">
             <use xlink:href="images/sprite.svg#close"></use>
           </svg>
         </button>
@@ -24,11 +24,11 @@
             </div>
           </div>
           <div class="cart-list__box">
-            <div class="cart-list__del">
+            <button class="cart-list__del" type="button">
               <svg class="cart__close-img" width="12" height="12">
                 <use xlink:href="images/sprite.svg#close"></use>
               </svg>
-            </div>
+            </button>
             <div class="cart-list__footer">
               <div class="cart-list__counter">
                 <button class="cart-list__btn">
@@ -42,7 +42,7 @@
                     <use xlink:href="images/sprite.svg#plus"></use>
                   </svg>
                 </button>
-                
+
               </div>
               <span class="cart-list__price">
                 1998 <span>₽</span>
@@ -62,11 +62,11 @@
             </div>
           </div>
           <div class="cart-list__box">
-            <div class="cart-list__del">
+            <button class="cart-list__del" type="button">
               <svg class="cart__close-img" width="12" height="12">
                 <use xlink:href="images/sprite.svg#close"></use>
               </svg>
-            </div>
+            </button>
             <div class="cart-list__footer">
               <div class="cart-list__counter">
                 <button class="cart-list__btn">
@@ -80,7 +80,7 @@
                     <use xlink:href="images/sprite.svg#plus"></use>
                   </svg>
                 </button>
-        
+
               </div>
               <span class="cart-list__price">
                 2038 <span>₽</span>
@@ -98,24 +98,126 @@
       </div>
     </div>
   </div>
+  <div class="menu">
+    <div class="menu__top">
+      <a class="logo" href="#">
+        <img class="logo__img" src="images/sprite/logo.svg" alt="Логотип">
+      </a>
+      <button class="close close--menu" type="btn">
+        <svg class="close-img" width="24" height="24">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="menu__registration">
+      <div class="menu__container">
+        <a class="menu__registration-link menu__registration-link--signin" href="#">Вход</a>
+        <a class="menu__registration-link" href="#">Регистрация</a>
+      </div>
+    </div>
+
+    <div class="menu__catalog">
+      <div class="menu__container">
+        <a class="menu__catalog-link" href="#">
+          Каталог товаров
+        </a>
+      </div>
+    </div>
+    <address class="menu__address">
+      <div class="menu__container">
+        <a class="menu__link menu__link--tel" href="tel:+7907288365">+7 907 288 365</a>
+        <a class="menu__link menu__link--address" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__link-img">
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </address>
+    <ul class="menu__list">
+      <div class="menu__container">
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Доставка</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">О нас</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Новости</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Контакты</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Акции</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Вакансии</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Отзывы</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Публичная оферта</a>
+        </li>
+      </div>
+    </ul>
+
+  </div>
   <div class="header__top">
     <div class="container">
       <div class="header__wrapper header__wrapper--top">
-
         <ul class="header__links">
           <li class="header__links-item">
             <a class="header__link header__link--address" href="#">
-              адрес и время доставки
+              <svg class="header__link-img">
+                <use xlink:href="images/sprite.svg#truck"></use>
+              </svg>
+              <span class="header__link-text">адрес и время доставки</span>
             </a>
           </li>
           <li class="header__links-item">
             <a class="header__link header__link--tel" href="#">
-              горячая линия 24/7
+              <svg class="header__link-img">
+                <use xlink:href="images/sprite.svg#tel"></use>
+              </svg>
+              <span class="header__link-text">горячая линия 24/7</span>
             </a>
           </li>
 
         </ul>
         <nav class="header__nav">
+          <button class="header__burger" type="button">
+            <svg class="header__burger-img" width="30" height="20">
+              <use xlink:href="images/sprite.svg#burger"></use>
+            </svg>
+          </button>
           <ul class="header__list">
             <li class="header__item">
               <a class="header__link" href="#">доставка</a>
@@ -136,13 +238,49 @@
     <div class="container">
       <div class="header__wrapper header__wrapper--bottom">
         <a class="logo" href="#">
-          <img class="logo__img" src="images/sprite/logo.svg" alt="Логотип">
+          <img class="logo__img logo__img--header" src="images/sprite/logo.svg" alt="Логотип">
+          <img class="logo__img--l" src="images/sprite/logo-l.svg" alt="Логотип">
         </a>
         <button class="header__catalog" type="button">
-          <svg class="header__catalog-img">
-            <use xlink:href="images/sprite.svg#catalog"></use>
-          </svg>
-          Каталог продуктов
+          Каталог <span class="header__catalog--none">продуктов</span>
+          <ul class="catalog">
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Бакалея</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Молочные продукты</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Хлеб</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Мясо</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Колбаса</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Рыба</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Алкоголь</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Напитки</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Торты</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Мясо</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Чай, кофе</a>
+            </li>
+          </ul>
         </button>
         <form class="search">
           <label class="sr-only" for="search">Найти в магазине</label>
@@ -151,8 +289,16 @@
           <button class="search__btn" type="submit">поиск</button>
         </form>
 
+
         <ul class="user">
-          <li class="user__item">
+          <li class="user__item user__item--search">
+            <button class="user__link" type="button">
+              <svg class="user__img">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="user__item user__item--user">
             <a class="user__link" href="#">
               <span class="sr-only">профиль</span>
               <svg class="user__img">
@@ -160,7 +306,7 @@
               </svg>
             </a>
           </li>
-          <li class="user__item">
+          <li class="user__item user__item--heart">
             <a class="user__link" href="#">
               <span class="user__num">12</span>
               <span class="sr-only">избранные товары</span>
@@ -170,9 +316,7 @@
             </a>
           </li>
           <li class="user__item">
-
             <button class="user__link user__link--cart" type="button">
-
               <span class="user__num">12</span>
               <span class="sr-only">корзина</span>
               <svg class="user__img">
