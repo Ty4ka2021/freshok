@@ -3,8 +3,16 @@
     padding: 25px 0;
   }
 
-  &__item {
-    text-align: center;
+  &__link {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s linear;
+    &:hover {
+      opacity: 1;
+    }
   }
   
   &__box-img {
@@ -12,12 +20,3 @@
     width: 100%;
   }
 }
-
-@media (max-width: 870px) {
-  .brands {
-    &__box {
-      padding: 0;
-    }
-  }
-}
-

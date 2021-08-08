@@ -1,0 +1,189 @@
+.breadcrumbs {
+  background-color: $silver-100;
+  padding: 24px 0;
+
+		&__list {
+      display: flex;
+		}
+
+		&__item {
+      line-height: 1.2;
+      padding-right: 18px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../images/sprite/chevron.svg');
+        right: 5px;
+        top: 4px;
+        width: 6px;
+        height: 10px;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+		}
+
+		&__link {
+		}
+}
+
+.catalog {
+  padding: 45px 0 85px;
+		&__title {
+      margin-bottom: 48px;
+		}
+
+		&__wrapper {
+      display: flex;
+		}
+}
+
+
+.filter {
+  &__top {
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $silver-600;
+  }
+
+  &__img {
+    width: 10px;
+    height: 18px;
+  }
+  &__item {
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.2;
+    @include Signika(400);
+    color: $dark-900;
+    
+  }
+
+  &__box {
+    padding: 18px 18px 32px;
+  }
+
+  &__box-categories {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__box-offers {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__box-brand {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__box-price {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__btn {
+    &--active {
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+
+.filter-categories {
+  max-height: 300px;
+    &__list {
+      max-height: 215px;
+      overflow: scroll;
+    }
+
+		&__item {
+      margin-bottom: 12px;
+		}
+
+		&__link {
+		}
+}
+
+
+.filter-price {
+  width: 270px;
+  &__label {
+    display: flex;
+  }
+
+  &__box {
+    min-width: 115px;
+  }
+
+  &__label {
+    padding-top: 4px;
+  }
+
+  &__from,
+  &__to {
+    padding: 12px 25px;
+    background-color: $silver-100;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 43px;
+  height: 2px;
+  background-color: $silver-500;
+  border-radius: 0;
+}
+
+.irs--flat .irs-bar {
+  top: 43px;
+  height: 2px;
+  background-color: $green-900;
+}
+
+.irs--flat .irs-handle {
+  top: 35px;
+  width: 18px;
+  height: 18px;
+  background-color: $green-900;
+  border-radius: 50%;
+}
+
+.irs--flat .irs-handle>i {
+  &:first-child {
+    display: none;
+  }
+}
+
+.irs-from, .irs-to , .irs-single {
+  display: none;
+}
+
+.irs--flat .irs-min, .irs-max {
+  display: none;
+}

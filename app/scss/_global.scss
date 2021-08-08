@@ -35,10 +35,21 @@ body {
   flex: 1 0 auto;
 }
 
+.currency {
+  font-size: 12px;
+
+  &--banners {
+    font-size: 28px;
+  }
+}
+
 .logo {
   display: inline-block;
     max-width: 200px;
     max-height: 60px;
+    @include xl{
+      margin-right: 10px;
+    }
     
   &__img {
     width: 100%;
@@ -72,6 +83,7 @@ body {
   background-color: $green-900;
   border-radius: 6px;
   transition: all 0.3s;
+  outline: transparent;
   &:hover {
     background-color: $green-800;
     }
@@ -126,4 +138,25 @@ body {
   &--hit {
     background-color: $orange-900;
   }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+
+  &__link{
+    margin-right: 12px;
+    transition: opacity 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  &__link-img{
+      width: 32px;
+      height: 32px;
+      fill: $white;
+    }
 }

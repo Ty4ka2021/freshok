@@ -45,9 +45,9 @@ function svgSprite() {
   return src('app/images/sprite/*.svg')
     .pipe(cheerio({
       run: function ($) {
-        $('fill').removeAttr('fill');
-        $('stroke').removeAttr('stroke');
-        $('style').removeAttr('style');
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
       },
       parserOptions: {
         xmlMode: true
@@ -73,6 +73,7 @@ function scripts() {
     'app/js/main.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
 
   ])
     .pipe(concat('main.min.js'))
@@ -84,8 +85,6 @@ function scripts() {
 function styles() {
   return src([
     'app/scss/style.scss',
-    'node_modules/slick-carousel/slick/slick.scss',
-
   ])
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))

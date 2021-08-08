@@ -12,3 +12,11 @@
   background-position: center;
   background-size: contain;
 }
+
+
+@mixin lc ($lc) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lc;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}

@@ -2,29 +2,45 @@
   background-color: $dark-100;
   padding: 72px 0;
   text-align: center;
+
+  @include lg {
+    padding: 30px 0;
+  }
+
 		&__title {
       text-align: center;
       margin-bottom: 32px;
+
+      @include lg {
+        margin-bottom: 10px;
+      }
 		}
 
     &__list {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      margin: 0 -15px;
 		}
 
 		&__item {
       background-color: $white;
       max-width: 300px;
       width: 100%;
-      margin-bottom: 30px;
+      margin: 0 15px;
       border: 2px solid $silver-600;
       transition: border 0.5s;
       padding: 13px 12px;
       border-radius: 6px;
+      margin-bottom: 30px;
+
       &:hover {
         border: 2px solid $green-900;
+      }
+
+      @include lg {
+        padding: 13px 25px;
       }
 		}
 
@@ -35,6 +51,38 @@
       @include Lato(400);
       padding: 12px 24px;
     }
+}
+
+.promo-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  @include lg {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    margin-right: 27px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-size: 17px;
+    outline: transparent;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom: 3px solid $green-200;
+    }
+  }
+
+  .mixitup-control-active {
+    border-bottom: 3px solid #e0edcf;
+}
 }
 
 .promo-cards {
@@ -66,10 +114,7 @@
       @include Lato(600);
       color: $dark-900;
       font-size: 15px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;  
-      overflow: hidden;
+      @include lc(3);
       margin-bottom: auto;
 		}
 
@@ -132,25 +177,13 @@
     &__star {
       max-width: 40px;
       width: 100%;
-    }
-}
-
-@media (max-width: 870px) {
-  .promo {
-    padding: 30px 0;
-
-    &__title {
-      margin-bottom: 10px;
+      position: relative;
     }
 
-    &__filter {
-      margin-bottom: 10px;
+    &__star-img {
+      position: absolute;
+      right: 0;
+      top: 2px;
+      fill: $yellow;
     }
-
-    &__item {
-      max-width: 450px;
-      padding: 13px 25px;
-      margin-bottom: 10px;
-    }
-  }
 }

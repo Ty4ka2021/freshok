@@ -2,16 +2,20 @@
 @import "reset";
 @import "vars";
 @import "libs";
-@import "global";
 @import "mixin";
+@import "media";
+@import "global";
 
 @import "components/header";
+@import "components/cart";
 @import "components/main-slider";
 @import "components/advantages";
 @import "components/top-products";
+@import "components/banners";
 @import "components/promo";
 @import "components/brands";
 @import "components/news";
+@import "components/catalog";
 @import "components/footer";
 
 
