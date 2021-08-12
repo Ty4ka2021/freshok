@@ -1,21 +1,21 @@
+@import "mixin";
 @import "fonts";
 @import "reset";
-@import "vars";
 @import "libs";
-@import "mixin";
-@import "media";
+@import "vars";
 @import "global";
 
 @import "components/header";
-@import "components/cart";
-@import "components/main-slider";
-@import "components/advantages";
-@import "components/top-products";
-@import "components/banners";
-@import "components/promo";
-@import "components/brands";
-@import "components/news";
+@import "components/home-page/cart";
+@import "components/home-page/main-slider";
+@import "components/home-page/advantages";
+@import "components/home-page/top-products";
+@import "components/home-page/banners";
+@import "components/home-page/promo";
+@import "components/home-page/brands";
+@import "components/home-page/news";
 @import "components/catalog";
+@import "components/pagination";
 @import "components/footer";
 
 

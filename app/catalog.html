@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ФРЕШОК|catalog</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <!--#include virtual="components/header.html" -->
+  <main class="main">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Главная
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Каталог товаров
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="catalog">
+      <div class="container">
+        <h2 class="title catalog__title">
+          Каталог товаров
+        </h2>
+
+        <div class="catalog__wrapper">
+          <div class="filter">
+            <div class="filter-categories filter__item">
+              <div class="filter__top">
+                <h3 class="filter__title">Категории</h3>
+                <button class="filter__btn filter__btn--categories">
+                  <svg class="filter__img">
+                    <use xlink:href="images/sprite.svg#arrows"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="filter__box filter__box-categories">
+                <ul class="filter-categories__list filter__list">
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Овощи и фрукты</a>
+                  </li>
+
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Бакалея</a>
+                  </li>
+
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Молочные продукты</a>
+                  </li>
+
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Хлеб</a>
+                  </li>
+
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Мясо</a>
+                  </li>
+
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Колбаса</a>
+                  </li>
+
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Рыба</a>
+                  </li>
+
+                  <li class="filter-categories__item">
+                    <a class="filter-categories__link" href="#">Алкоголь</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="filter-offers filter__item">
+              <div class="filter__top">
+                <h3 class="filter__title">Предложения</h3>
+                <button class="filter__btn filter__btn--offers">
+                  <svg class="filter__img">
+                    <use xlink:href="images/sprite.svg#arrows"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="filter__box filter__box-offers">
+                <ul class="filter-offers__list filter__list">
+                  <li class="filter-offers__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="1">Со скидкой
+                  </li>
+
+                  <li class="filter-offers__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="2">Новинка
+                  </li>
+
+                  <li class="filter-offers__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="3">Хит
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="filter-brand filter__item">
+              <div class="filter__top">
+                <h3 class="filter__title">Бренд</h3>
+                <button class="filter__btn filter__btn--brand">
+                  <svg class="filter__img">
+                    <use xlink:href="images/sprite.svg#arrows"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="filter__box filter__box-brand">
+                <ul class="filter-brand__list filter__list">
+                  <li class="filter-brand__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="1">CocaCola
+                  </li>
+
+                  <li class="filter-brand__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="2">Pepsi
+                  </li>
+
+                  <li class="filter-brand__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="3">Sprite
+                  </li>
+
+                  <li class="filter-brand__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="4">Fanta
+                  </li>
+
+                  <li class="filter-brand__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="5">RedBull
+                  </li>
+
+                  <li class="filter-brand__item filter-checkbox">
+                    <input class="filter-checkbox__item" type="checkbox" name="6">Dr Pepper
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="filter-price filter__item">
+              <div class="filter__top">
+                <h3 class="filter__title">Цена</h3>
+                <button class="filter__btn filter__btn--price">
+                  <svg class="filter__img">
+                    <use xlink:href="images/sprite.svg#arrows"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="filter__box filter__box-price">
+                <form class="filter-price__form" action="#">
+                  <label class="filter-price__label">
+                    <div class="filter-price__box">от
+                      <span class="filter-price__from"></span>
+                      <span class="currency">₽</span>
+                    </div>
+                    <div class="filter-price__box">до
+                      <span class="filter-price__to"></span>
+                      <span class="currency">₽</span>
+                    </div>
+                  </label>
+                  <input class="filter-price__input" type="text" data-min="0" data-max="1200" data-from="100"
+                    data-to="1000">
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog__content">
+            <div class="catalog-setting">
+              <form class="catalog-setting__form" action="#">
+                <select class="catalog-setting__sorting select-style" name="select1">
+                  <option selected="selected">По названию</option>
+                  <option>По популярности</option>
+                  <option>Сначала дешевые</option>
+                  <option>Сначала дорогие</option>
+                  <option>По алфавиту</option>
+                </select>
+
+                <select class="catalog-setting__num select-style" name="select2">
+                  <option selected="selected">по 12</option>
+                  <option>по 18</option>
+                  <option>по 24</option>
+                  <option>по 30</option>
+                  <option>по 36</option>
+                </select>
+
+              </form>
+
+
+
+              <div class="catalog-setting__view">
+                <button class="catalog-filter__btn button-list" type="button">
+                  <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="47" height="47" rx="3" fill="#F6F6F6" />
+                    <path
+                      d="M38.4 34H30.6C29.1641 34 28 34.6268 28 35.4V39.6C28 40.3732 29.1641 41 30.6 41H38.4C39.8359 41 41 40.3732 41 39.6V35.4C41 34.6268 39.8359 34 38.4 34Z"
+                      fill="#C1C1C1" />
+                    <path
+                      d="M16.4 34H8.6C7.16406 34 6 34.6268 6 35.4V39.6C6 40.3732 7.16406 41 8.6 41H16.4C17.8359 41 19 40.3732 19 39.6V35.4C19 34.6268 17.8359 34 16.4 34Z"
+                      fill="#C1C1C1" />
+                    <path
+                      d="M38.4 20H30.6C29.1641 20 28 20.6268 28 21.4V25.6C28 26.3732 29.1641 27 30.6 27H38.4C39.8359 27 41 26.3732 41 25.6V21.4C41 20.6268 39.8359 20 38.4 20Z"
+                      fill="#C1C1C1" />
+                    <path
+                      d="M16.4 20H8.6C7.16406 20 6 20.6268 6 21.4V25.6C6 26.3732 7.16406 27 8.6 27H16.4C17.8359 27 19 26.3732 19 25.6V21.4C19 20.6268 17.8359 20 16.4 20Z"
+                      fill="#C1C1C1" />
+                    <path
+                      d="M38.4 6H30.6C29.1641 6 28 6.6268 28 7.4V11.6C28 12.3732 29.1641 13 30.6 13H38.4C39.8359 13 41 12.3732 41 11.6V7.4C41 6.6268 39.8359 6 38.4 6Z"
+                      fill="#C1C1C1" />
+                    <path
+                      d="M16.4 6H8.6C7.16406 6 6 6.6268 6 7.4V11.6C6 12.3732 7.16406 13 8.6 13H16.4C17.8359 13 19 12.3732 19 11.6V7.4C19 6.6268 17.8359 6 16.4 6Z"
+                      fill="#C1C1C1" />
+                  </svg>
+
+                </button>
+                <button class="catalog-filter__btn catalog-filter__btn--active button-grid" type="button">
+                  <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="47" height="47" rx="3" fill="#F6F6F6" />
+                    <path
+                      d="M12.0444 32.4445H7.51111C6.67655 32.4445 6 33.121 6 33.9556V38.4889C6 39.3235 6.67655 40 7.51111 40H12.0444C12.879 40 13.5556 39.3235 13.5556 38.4889V33.9556C13.5556 33.121 12.879 32.4445 12.0444 32.4445Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M26.2111 32.4445H21.6778C20.8432 32.4445 20.1667 33.121 20.1667 33.9556V38.4889C20.1667 39.3235 20.8432 40 21.6778 40H26.2111C27.0457 40 27.7222 39.3235 27.7222 38.4889V33.9556C27.7222 33.121 27.0457 32.4445 26.2111 32.4445Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M40.3778 32.4445H35.8444C35.0099 32.4445 34.3333 33.121 34.3333 33.9556V38.4889C34.3333 39.3235 35.0099 40 35.8444 40H40.3778C41.2123 40 41.8889 39.3235 41.8889 38.4889V33.9556C41.8889 33.121 41.2123 32.4445 40.3778 32.4445Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M12.0444 19.2222H7.51111C6.67655 19.2222 6 19.8987 6 20.7333V25.2666C6 26.1012 6.67655 26.7777 7.51111 26.7777H12.0444C12.879 26.7777 13.5556 26.1012 13.5556 25.2666V20.7333C13.5556 19.8987 12.879 19.2222 12.0444 19.2222Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M26.2111 19.2222H21.6778C20.8432 19.2222 20.1667 19.8987 20.1667 20.7333V25.2666C20.1667 26.1012 20.8432 26.7777 21.6778 26.7777H26.2111C27.0457 26.7777 27.7222 26.1012 27.7222 25.2666V20.7333C27.7222 19.8987 27.0457 19.2222 26.2111 19.2222Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M40.3778 19.2222H35.8444C35.0099 19.2222 34.3333 19.8987 34.3333 20.7333V25.2666C34.3333 26.1012 35.0099 26.7777 35.8444 26.7777H40.3778C41.2123 26.7777 41.8889 26.1012 41.8889 25.2666V20.7333C41.8889 19.8987 41.2123 19.2222 40.3778 19.2222Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M12.0444 6H7.51111C6.67655 6 6 6.67655 6 7.51111V12.0444C6 12.879 6.67655 13.5556 7.51111 13.5556H12.0444C12.879 13.5556 13.5556 12.879 13.5556 12.0444V7.51111C13.5556 6.67655 12.879 6 12.0444 6Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M26.2111 6H21.6778C20.8432 6 20.1667 6.67655 20.1667 7.51111V12.0444C20.1667 12.879 20.8432 13.5556 21.6778 13.5556H26.2111C27.0457 13.5556 27.7222 12.879 27.7222 12.0444V7.51111C27.7222 6.67655 27.0457 6 26.2111 6Z"
+                      fill="#63A60E" />
+                    <path
+                      d="M40.3778 6H35.8444C35.0099 6 34.3333 6.67655 34.3333 7.51111V12.0444C34.3333 12.879 35.0099 13.5556 35.8444 13.5556H40.3778C41.2123 13.5556 41.8889 12.879 41.8889 12.0444V7.51111C41.8889 6.67655 41.2123 6 40.3778 6Z"
+                      fill="#63A60E" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <ul class="products products--grid">
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--new">Новинка</span>
+                      <span class="badge badge--sale">-50 <span>%</span></span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/pineapple.png"
+                      alt="Ананас">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Ананас, 1кг
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__oldprice">1999 <span class="currency">₽</span></span>
+                      <span class="product-card__promoprice">999 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/lemon.png"
+                      alt="Лимон">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Лимон, 1кг
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">199 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--hit">Хит</span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/dragon.png"
+                      alt="Питахайя">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Питахайя красная с белой мякотью, 1шт
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">1019 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--new">Новинка</span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/paprik.png"
+                      alt="Перец">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Перец оранжевый, 1кг
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">349 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--hit">Хит</span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/carrot.png"
+                      alt="Морковь">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Морковь молодая с бабушкиной грядки, 1кг
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">49 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--sale">-30 <span>%</span></span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/juice.png"
+                      alt="Сок">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный...
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__oldprice">299 <span class="currency">₽</span></span>
+                      <span class="product-card__promoprice">199 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--new">Новинка</span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/coffee.png"
+                      alt="Кофе">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Кофе с коноплей органический Caffé Salomoni 250г
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">877 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/ketchup.png"
+                      alt="кетчуп">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Кетчуп томатный детский органический Bio-Zentrale 500мл
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">600 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--new">Новинка</span>
+                      <span class="badge badge--sale">-50 <span>%</span></span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/pineapple.png"
+                      alt="Ананас">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Ананас, 1кг
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__oldprice">1999 <span class="currency">₽</span></span>
+                      <span class="product-card__promoprice">999 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/lemon.png"
+                      alt="Лимон">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Лимон, 1кг
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">199 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--hit">Хит</span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/dragon.png"
+                      alt="Питахайя">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Питахайя красная с белой мякотью, 1шт
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">1019 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__badges">
+                      <span class="badge badge--new">Новинка</span>
+                    </div>
+                    <button class="product-card__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="product-card__favorit" width="32" height="28">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a class="product-card__body" href="#">
+                    <img class="product-card__img" width="300" height="225" src="images/top_product/paprik.png"
+                      alt="Перец">
+                  </a>
+                  <h3 class="product-card__subtitle">
+                    Перец оранжевый, 1кг
+                  </h3>
+                  <div class="product-card__inner">
+                    <div class="product-card__price">
+                      <span class="product-card__promoprice">349 <span class="currency">₽</span></span>
+                    </div>
+                    <button class="product-card__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="product-card__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+
+            </ul>
+
+            <ul class="promo-list promo-list--list">
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--new">Новинка</span>
+                      <span class="badge badge--sale">-50 <span>%</span></span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/pineapple.png" alt="Ананас" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__oldprice">1999<span class="currency">₽</span></span>
+                        <span class="promo-cards__promoprice">900<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <img class="promo-cards__img" src="images/top_product/lemon.png" alt="Лимон" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Лимон, 1кг</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">199<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--hit">Хит</span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/dragon.png" alt="Питахайя" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Питахайя красная с белой мякотью, 1шт</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">1019<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--hit">Хит</span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/carrot.png" alt="Морковь" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--no promo-cards__availability--list">
+                      нет в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Морковь молодая с бабушкиной грядки, 1кг</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">49<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--sale">-30 <span>%</span></span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/juice.png" alt="Напиток" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Напиток сокосодержащий Sanpellegrino Aranciata...</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__oldprice">299<span class="currency">₽</span></span>
+                        <span class="promo-cards__promoprice">199<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--new">Новинка</span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/coffee.png" alt="кофе" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">877<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--new">Новинка</span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/paprik.png" alt="Перец" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--ends promo-cards__availability--list">
+                      заканчивается
+                    </span>
+                    <h3 class="promo-cards__title">Перец оранжевый, 1кг</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">349<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/ketchup.png" alt="Кетчуп" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Кетчуп томатный детский органический Bio-Zentrale 500мл</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">600<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--new">Новинка</span>
+                      <span class="badge badge--sale">-50 <span>%</span></span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/pineapple.png" alt="Ананас" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Ананас, 1 кг</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__oldprice">1999<span class="currency">₽</span></span>
+                        <span class="promo-cards__promoprice">900<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <img class="promo-cards__img" src="images/top_product/lemon.png" alt="Лимон" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Лимон, 1кг</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">199<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--hit">Хит</span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/dragon.png" alt="Питахайя" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--instock promo-cards__availability--list">
+                      в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Питахайя красная с белой мякотью, 1шт</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">1019<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+              <li class="promo__item promo__item--list">
+                <article class="promo-cards">
+                  <a class="promo-cards__box promo-cards__box--list" href="#">
+                    <div class="promo-cards__badges">
+                      <span class="badge badge--hit">Хит</span>
+                    </div>
+                    <img class="promo-cards__img" src="images/top_product/carrot.png" alt="Морковь" width="200"
+                      height="144">
+                  </a>
+                  <div class="promo-cards__body promo-cards__body--list">
+                    <span
+                      class="promo-cards__availability promo-cards__availability--no promo-cards__availability--list">
+                      нет в наличии
+                    </span>
+                    <h3 class="promo-cards__title">Морковь молодая с бабушкиной грядки, 1кг</h3>
+                    <div class="promo-cards__item">
+                      <div class="promo-cards__price promo-cards__price--list">
+                        <span class="promo-cards__promoprice">49<span class="currency">₽</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-cards__wrapper">
+
+                    <span class="promo-cards__star">4.5
+                      <svg class="promo-cards__star-img" width="16" height="15">
+                        <use xlink:href="images/sprite.svg#star"></use>
+                      </svg>
+                    </span>
+
+                    <button class="promo-cards__favorit-box" type="button">
+                      <span class="sr-only">добавить в избранное</span>
+                      <svg class="promo-cards__img promo-cards__img--heart" width="38" height="30">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+
+                    <button class="promo-cards__btn">
+                      <span class="sr-only">Купить</span>
+                      <svg class="promo-cards__icon">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                </article>
+              </li>
+
+
+
+
+
+
+
+
+            </ul>
+
+            <div class="pagination">
+              <button class="pagination__btn btn">Показать еще</button>
+              <div class="pagination__wrapper">
+                <a class="pagination__arrows pagination__arrows--prev" href="#">
+                  <svg class="" width="12" height="18">
+                    <use xlink:href="images/sprite.svg#arrow-left"></use>
+                  </svg>
+                </a>
+                <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--active" href="#">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <span class="pagination__link">...</span>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">9</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">10</a>
+                  </li>
+                </ul>
+                <a class="pagination__arrows pagination__arrows--next" href="#">
+                  <svg class="" width="12" height="18">
+                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--#include virtual="components/home-page/advantages.html" -->
+  <!--#include virtual="components/footer.html" -->
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -133,7 +133,6 @@
     border-radius: 6px;
     min-width: 234px;
     position: relative;
-    margin: 0 20px;
     outline: transparent;
     transition: all 0.3s linear;
     &:focus,
@@ -200,14 +199,14 @@
   border: 1px solid $silver-200;
   border-radius: 0px 0px 6px 6px;
   transition: display 0.3s linear;
-  //работает
-  :not(:last-child) {
+
+  &__item {
+
+    &:not(:last-child) {
         border-bottom: 3px solid $silver-200;
       }
-  // не работает
-  // &:not(:last-child) {
-  //       border-bottom: 3px solid $silver-200;
-  //     }
+  }
+
   @include xl {
     overflow: auto;
     max-height: 400px;
@@ -240,16 +239,6 @@
   @include lg {
     display: none;
   }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 13px;    
-    width: 20px;
-    height: 20px;
-    background-image: url('../images/sprite/search.svg');
-  }
 
   &--active {
     @include lg {
@@ -271,6 +260,11 @@
     border-radius: 6px 0 0 6px;
     padding: 16px 10px 15px 53px;
     outline: transparent;
+    background-image: url(../images/sprite.svg#search);
+    background-position: -2% 50%;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    
     @include lg {
       border-radius: 0px;
     }
@@ -285,7 +279,7 @@
     line-height: 1.4;
     background-color: $dark-800;
     border-radius: 0 6px 6px 0;
-    width: 158px;
+    padding: 0 52px;
     @include Lato(600);
     color: $white;
     outline: transparent;
@@ -410,14 +404,11 @@
       font-style: normal;
       color: $dark-800;
       margin-bottom: 18px;
-		}
 
-		&__link--tel {
-      position: relative;
-		}
-
-		&__link--address {
-      position: relative;
+      &--tel,
+      &--address {
+        position: relative;
+      }
 		}
 
     &__img {
@@ -442,6 +433,8 @@
       background-color: $white;
       overflow: auto;
       max-height: 400px;
+
+      @include scroll;
 		}
 
 		&__list-item {
@@ -519,8 +512,9 @@
 
   &__num {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    min-width: 22px;
+    min-height: 18px;
+    padding: 2px;
     border-radius: 10px;
     background-color: $white;
     top: 2px;

@@ -1,4 +1,7 @@
 $(function () {
+
+  $('.select-style').styler();
+
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",
@@ -93,6 +96,22 @@ $(function () {
   $('.filter__btn--price').on('click', function () {
     $('.filter__box-price').toggleClass('filter__box-price--active');
     $('.filter__btn--price').toggleClass('filter__btn--active');
+  });
+  $('.catalog-filter__btn').on('click', function () {
+    $('.catalog-filter__btn').removeClass('catalog-filter__btn--active');
+    $(this).addClass('catalog-filter__btn--active');
+  });
+  
+  $('.button-list').on('click', function () {
+    $('.products').addClass('products--list');
+    $('.products').removeClass('products--grid');
+    $('.promo-list').addClass('promo-list--active');
+  });
+
+  $('.button-grid').on('click', function () {
+    $('.products').addClass('products--grid');
+    $('.products').removeClass('products--list');
+    $('.promo-list').removeClass('promo-list--active');
   });
 
 

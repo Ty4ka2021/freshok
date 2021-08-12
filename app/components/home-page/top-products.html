@@ -1,0 +1,44 @@
+<section class="top-products" data-ref="top-products">
+  <div class="container">
+    <h2 class="title top-products__title">
+      Топовые товары
+    </h2>
+
+    <ul class="categories-menu">
+      <li class="categories-menu__item">
+        <button class="categories-menu__btn" type="button" data-filter="all">
+          Все товары
+        </button>
+      </li>
+
+      <li class="categories-menu__item">
+        <button class="categories-menu__btn" type="button" data-filter=".category-fruits">
+          Фрукты
+        </button>
+      </li>
+
+      <li class="categories-menu__item">
+        <button class="categories-menu__btn" type="button" data-filter=".category-vegetables">
+          Овощи
+        </button>
+      </li>
+
+      <li class="categories-menu__item">
+        <button class="categories-menu__btn" type="button" data-filter=".category-beverages">
+          Напитки
+        </button>
+      </li>
+
+      <li class="categories-menu__item">
+        <button class="categories-menu__btn" type="button" data-filter=".category-grocery">
+          Бакалея
+        </button>
+      </li>
+    </ul>
+
+    <div class="top-products__inner">
+      <!--#include virtual="products.html" -->
+      <button class="top-products__link link" type="button">Показать еще</button>
+    </div>
+  </div>
+</section>

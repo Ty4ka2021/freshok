@@ -1,0 +1,56 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    color: $white;
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+  
+
+  &__list {
+    display: flex;
+    padding: 0 6px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__link {
+    padding: 15px 18px;
+    background-color: $silver-100;
+    border-radius: 3px;
+    &--active {
+      border: 1px solid $dark-500;
+      
+    }
+  }
+
+  &__arrows {
+    padding: 15px 18px;
+    border-radius: 3px;
+    background-color: $silver-100;
+    fill: $silver-600;
+
+    &--next {
+      fill: $dark-500;
+    }
+  }
+
+
+
+  
+}
